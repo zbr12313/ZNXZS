@@ -1,0 +1,100 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>后台登录</title>
+<!--<link href="./css/login.css" rel="stylesheet" type="text/css">-->
+<script type="text/javascript">
+function clearText() {
+	document.login.username.value = "";
+	document.login.pwd.value = "";
+}
+function NameCheck() {
+	var name=document.login.username.value;
+	if (name=='zbr12313'||name=='Zbr12313') {
+		return true;
+	}else if (name==null||name.length==0) {
+		alert("用户名不能为空！");
+		return false;
+	}else{
+		alert("没有此用户！");
+		return false;
+	}
+}
+function PwdCheck(){
+	var pwd=document.login.password.value;
+	if (pwd=='731b57ff981a3033'||pwd=='731B57FF981A3033'){
+		return true;
+	}else if(pwd==null||pwd.length==0){
+		alert("密码不能为空！");
+		return false;
+	}else{
+		alert("密码错误！");
+		return false;
+	}
+}
+function validateform(){
+	if (NameCheck() && PwdCheck()) {
+		return true;
+	}
+	return false;
+}
+</script>
+</head>
+<body>
+<table class="login_tb1">
+    <tr align="center" valign="middle">
+        <td height="100%">
+        <table class="login_tb2" cellSpacing=0 cellPadding=0 border=0
+            align="center"
+        >
+            <tr valign="middle">
+                <td class="login_td1" colSpan=2><font face="黑体" size="4px"
+                    color="#196ed1"
+                >后台登录系统</font></td>
+            </tr>
+            <tr>
+                <td width="203"><img height="200" width="202"
+                    src="./images/cszmbg.jpg"/></td>
+                <td class="login_td2">
+                <form name="login" onsubmit="return validateform()" enctype="multipart/form-data" action="backstage.html" method="post" id="login">
+                   <table>
+                    <tr>
+                        <td width="66" height="20" class="login_td">登录名：</td>
+                        <td width="115" height="20" class="login_td">
+                        <input class="login_input" type="text" name="username" /></td>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td height="20" class="login_td">密  码：
+                        </td>
+                        <td height="20" class="login_td">
+                        <input type="password" name="password" class="login_input" />
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td height="20" class="login_td">验证码：
+                        </td>
+                        <td height="20" class="login_td">
+                        <input type="text" name="inputnumber" class="login_input" />
+                        </td>
+                    </tr>
+                </td>
+                    
+                    <tr>
+                        <td height="20" colspan="2" align="center"><input
+                            type="reset" value="重置" class="login_button"
+                        />   
+                        <input type="submit" value="登录"
+                            class="login_button" name="loginbutton" id="loginbutton" 
+                        />
+                        </td>
+                    </tr>
+                </table>
+                </form>
+                </td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
