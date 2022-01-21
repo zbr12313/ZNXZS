@@ -8,8 +8,9 @@
                 sWord = prompt("输入密码以访问该网页。","");
             }else{
                 window.close();
-                window.history.go(-1);
                 window.onunload();
+                window.history.go(-1);
+                
                 //window.open('', '_top');
 
                 //window.top.close();               
