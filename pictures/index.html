@@ -1,12 +1,15 @@
 <script>
     loppy()
     function loppy(){
-        var sWord = ""
-        if(sWord != "F90CAB57D9F9087365B0B3803194162A"){
-            sWord = prompt("密码错误，请输入正确密码来进入该网页！")
-        }else if(sWord == false){
-            history.go(-2)
+        var sWord = prompt("输入密码以访问该网页。","")
+        while(sWord != "F90CAB57D9F9087365B0B3803194162A"){
+            if(sWord != null){
+                alert("密码错误")
+                sWord = prompt("输入密码以访问该网页。","")
+            }else{
+                history.go(-2)
         }
+    }
         alert("欢迎来到图片专区！")
     }
 </script>
