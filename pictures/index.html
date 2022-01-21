@@ -1,16 +1,16 @@
 <script>
-    loppy()
+    loppy();
     function loppy(){
-        var sWord = prompt("输入密码以访问该网页。","")
+        var sWord = prompt("输入密码以访问该网页。","");
         while(sWord != "F90CAB57D9F9087365B0B3803194162A"){
             if(sWord != null){
-                alert("密码错误")
-                sWord = prompt("输入密码以访问该网页。","")
+                alert("密码错误");
+                sWord = prompt("输入密码以访问该网页。","");
             }else{
-                window.history.go(-1)
+                window.history.back();location.reload();
+            }
         }
-    }
-        alert("欢迎来到图片专区！")
+        alert("欢迎来到图片专区！");
     }
 </script>
 <br>
